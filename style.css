@@ -281,8 +281,8 @@
 }
 .search span{
      position: absolute;
-     left: 7%;
-     top: 12px;
+     left: -5%;
+     top: 0px;
      font-size: 20px;
      font-weight: 100;
      color: #454545;
