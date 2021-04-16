@@ -12,17 +12,19 @@ html {
      width: 350px;
 }
 .logo{
-     padding: 0 0 4% 27%;
+     padding: 0 0 4% 1%;
 }
 .logo i{
      font-size: 33px;
      color: #00a7f0;
+     top: 0;
+     position: fixed;
 }
 .sidebar-menu{
      position: fixed;
 }
 .sidebar-menu div{
-     padding: 2% 0 8% 31%;
+     padding: 8% 0 0% 1%;
 }
 .sidebar-menu div a{
      text-decoration: none;
@@ -33,6 +35,7 @@ html {
      align-items: center;
      border-radius: 50px;
      color: black;
+
 }    
 .sidebar-menu div a i{
      padding: 0 20% 0 0;
