@@ -1,51 +1,49 @@
-*{
-     padding: 0;
-     margin: 0;
-     font-family: 'Source Sans Pro', sans-serif;
-}
-.container{
+html {
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+ }
+.layout{
      display: grid;
-     grid-template-columns: 26% 39% 35%;
-}
-.options-menu{
-     width: 99.8%;
-     border-right: 1px solid #080808;
-     height: 760px;
-}
-.options-center{
-     width: 75%;
+     grid-template-columns: 275px auto 350px;
      margin: 0 auto;
+     max-width: 1200px;
+}
+.right-sidebar{
+     position: fixed;
+     width: 350px;
 }
 .logo{
-     padding: 4% 0 4% 37%;
+     padding: 0 0 4% 27%;
 }
 .logo i{
      font-size: 33px;
      color: #00a7f0;
 }
-.option{
-     display: grid;
+.sidebar-menu{
+     position: fixed;
 }
-.option div a{
-     text-decoration: none;
-     font-size: 25px;
-     font-weight: 600;
-     padding: 15px 15px;
-     border-radius: 30px;
-     color: black;
-}
-.option div{
+.sidebar-menu div{
      padding: 2% 0 8% 31%;
 }
-.option div a i{
+.sidebar-menu div a{
+     text-decoration: none;
+     font-size: 19px;
+     font-weight: 700;
+     padding: 10px;
+     display: flex;
+     align-items: center;
+     border-radius: 50px;
+     color: black;
+}    
+.sidebar-menu div a i{
      padding: 0 20% 0 0;
      font-weight: 100;
 }
-.option div a:hover{
+.sidebar-menu div a:hover{
      color: #00a7f0;
      background: #e1f5ff;
+     width: 170px;
 }
-.option button{
+.sidebar-menu button{
      padding: 15px 80px;
      border-radius: 30px;
      outline: none;
@@ -56,14 +54,13 @@
      font-size: 16px;
      cursor: pointer;
 }
-.option button:hover{
+.sidebar-menu button:hover{
      background: #00a7f0;
      transition: 0.1s;
 }
-.content-menu{
-     width: 99.6%;
-     border-right: 1px solid #e8e8e8;
-     background: white;
+.main{
+     border-left: 1px solid #e6ecf0;
+     border-right: 1px solid #e6ecf0;
 }
 .prefer{
      width: 100%;
@@ -77,6 +74,7 @@
      top: 0;
      background: white;
      z-index: 1000;
+     cursor: pointer;
 }
 .prefer span{
      padding: 0 20px;
@@ -89,11 +87,15 @@
 }
 .prefer span i{
      font-size: 18px;
+     cursor: pointer;
+}
+.prefer span i:hover{
      color: #00a7f0;
 }
 .you-tweet-other-tweet{
      max-height: 704px;
-
+     border-bottom: 12px solid #e6ecf0;
+     padding: 5px;
 }
 .you-tweet-other-tweet{
      overflow: auto;
@@ -160,287 +162,169 @@
 .add-extra span button:hover{
      background: #0093ff;
 }
-.other-tweets{
-     width: 100%;
-}
-.other-tweet{
-     width: 100%;
-     border-bottom: 1px solid #e8e8e8;
-}
-.profile-msg{
-     display: grid;
-     grid-template-columns: 12% 76% 12%;
-     margin: 20px 0 10px 0;
-     align-items: center;
-}
-.others-profile{
-     padding: 0 0 0 10px;
-}
-.others-profile img{
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     opacity: 0.9;
-     cursor: pointer;
-}
-.others-profile img:hover{
-     opacity: 1;
-}
-.name-msg span i{
-     padding: 0 4px 0 4px;
-     color: #00a7ff;
-     font-size: 20px;
-}
-.name-msg{
-     cursor: pointer;
-}
-.name-msg span p{
-     color: #5d5d5d;
-}
-.name-msg span b{
-     color: black;
-}
-.msg{
-     color: black;
-     font-size: 16px;
-     font-weight: 500;
-     padding: 5px 0 0 0;
-     text-align: justify;
-     text-justify: inter-word;
-     word-wrap: break-word;
-}
-.name-msg span b:hover{
-     text-decoration: underline;
-}
-.more-options{
-     cursor: pointer;
-}
-
-.your-reaction{
-     margin: 3px 0 5px 15px;
+.tweet{
      display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     width: 70%;
-     opacity: 0.7;
-}
-.your-reaction div{
-     display: flex;
-     align-items: center;
+     border-bottom: 1px solid #e6ecf0;
+     margin-bottom: 2px;
+     padding: 10px 15px;
      cursor: pointer;
 }
-.your-reaction div p{
-     padding: 0 0 0 5px;
-     font-size: 12px;
-}
-.your-reaction div i{
-     font-size: 20px;
-     padding: 5px 5px;
+.tweet img{
+     width: 49px;
+     height: 49px;
      border-radius: 50%;
+     margin-right: 10px;
 }
-.comment:hover{
-     color: #00a7ff;
+.tweet-header{
+     display: flex;
 }
-.retweet:hover{
-     color: green;
-}
-.like:hover{
-     color: red;
-}
-.bookmark:hover{
-     color: #00a7ff;
-}
-.trending-menu{
-     width: 100%;
-}
-.trending-center{
-     width: 100%;
-     margin: 0 0 0 50px;
-}
-.search{
-     width: 100%;
-     height: 55px;
-     position: sticky;
-     top: 0;
-     background: #ffffff;
-     align-items: center;
-     z-index: 1000;
-}
-.search-input{
-     width: 100%;
-     height: 40px;
-     margin: 1% 0 0 0;
-     border-radius: 30px;
-     outline: none;
-     border: none;
-     background: #ebebeb;
-     padding: 0 10px 0 15px;
+.tweet-authorName{
      font-size: 15px;
-     color: #151515;
-     letter-spacing: 1px;
+     font-weight: 700;
+     color: #141712;
+     margin-right: 5px;
 }
-.search span{
-     position: absolute;
-     left: -5%;
-     top: 0px;
-     font-size: 20px;
-     font-weight: 100;
-     color: #454545;
-}
-.trending, .follow{
-     width: 100%;
-     background: #efefef;
-     border-radius: 20px;
-     margin: 0 0 20px 0;
-     overflow-y: hidden;
-     max-height: 333px;
-}
-.trending:hover, .follow:hover{
-     overflow: auto;
-}
-.header{
-     width: 100%;
-     height: 55px;
-     border-bottom: 1px solid #d8d8d8;
-}
-.header p{
-     padding: 15px 20px;
-     font-size: 18px;
-     font-weight: 900;
-}
-.trends, .persons{
-     width: 100%;
-}
-.trend{
-     display: grid;
-     grid-template-columns: 70% 30%;
-     border-bottom: 1px solid #d4d4d4;
-}
-.trend-msg{
-     margin: 15px 0 0 20px;
-}
-.trend-name{
-     margin: 0 0 10px 0;
-     cursor: pointer;
-}
-.trend-name p, .trend-with p{
-     font-size: 12px;
-     opacity: 0.6;
-}
-.trend-width{
-     margin: 0 0 20px 0;
-     cursor: pointer;
-}
-.subject p{
+.tweet-authorSlug{
      font-size: 15px;
-     font-weight: 600;
-     text-justify: inter-word;
-     word-wrap: break-word;
-     margin: 0 0 10px 0;
-     cursor: pointer;
+     color: #5b7083;
 }
-.trend-with p a{
+.tweet-publishTime{
+     margin-left: 5px;
+     color: #657786;
+}
+.tweet-content img{
+     width: 500px;
+     height: 500px;
+     margin-right: 15px;
+     margin-top: 10px;
+     border-radius: 5%;
+}
+.tweet:hover{
+     background: rgba(0, 0, 0, 0.03);
+}
+.tweet a{
+     color: #1b94e0;
      text-decoration: none;
-     color: #00a7ff;
 }
-.trend-with p a:hover{
+.tweet a:hover{
      text-decoration: underline;
-     opacity: 1;
 }
-.trend-picture{
-     padding: 20px 0;
+.trends-for-you{
+     border-radius: 15px;
+     background: #f5f8fa;
+     margin-bottom: 15px;
+     margin-left: 25px;
 }
-.trend-picture img{
-     width: 70px;
-     height: 70px;
-     border-radius: 20px;
+.trends-for-youBlock{
+     border-bottom: 1px solid #e6ecf0;
+     padding: 10px 15px;
 }
-.trend:hover, .person:hover{
-     background: #e8e8e8;
+.trends-for-youBlock:last-child{
+     border-bottom: none;
 }
-.show-more{
-     padding: 20px 20px;
+.trends-for-youHeading{
+     font-size: 19px;
+     font-weight: bold;
+     color: #14171a;
+}
+.trends-for-youInformation{
+     font-size: 13px;
+     font-weight: 300;
+     color: #657786;
+     cursor: pointer;
+}
+.trends-for-youName{
+     font-size: 15px;
+     font-weight: bold;
+     color: #14171a;
+     margin-bottom: 5px;
+     margin-top: 2px;
+     cursor: pointer;
+}
+.who-to-follow{
+     background: #f5f8fa;
+     border-radius: 15px;
+     margin-left: 25px;
+}
+.who-to-followBlock{
+     padding: 10px 15px;
+     display: flex;
+     align-items: center;
+     border-bottom: 1px solid #e6ecf0;
+}
+.who-to-followBlock:hover{
+     background: rgba(0, 0, 0, 0.03);
+}
+.who-to-followBlock:last-child{
+     border-bottom: none;
+}
+.who-to-followHeading{
+     font-size: 19px;
+     font-weight: bold;
+     color: #14171a;
+}
+.who-to-follow img{
+     width: 49px;
+     height: 49px;
+     border-radius: 50%;
+     margin-right: 10px;
+     cursor: pointer;
+}
+.who-to-followContent{
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     cursor: pointer;
+}
+.who-to-follow-authorName{
+     font-size: 15px;
+     font-weight: 700;
+     cursor: pointer;
+}
+.who-to-follow-authorName:hover{
+     text-decoration: underline;
+}
+.who-to-follow-authorSlug{
+     font-size: 15px;
+     color: #657786;
+     cursor: pointer;
+}
+.who-to-followButton{
+     border: 1px solid #1da0f2;
+     color: #1da0f2;
+     font-size: 15px;
+     font-weight: 700;
+     border-radius: 15px;
+     padding: 5px;
+     min-width: 67px;
+     text-align: center;
+     cursor: pointer;
+}
+.who-to-followButton:hover{
+     background: rgba(29, 161, 242, 0.1);
+     cursor: pointer;
+}
+.who-to-followingButton{
+     border: 1px solid #1da0f2;
+     color: #1da0f2;
+     font-size: 15px;
+     font-weight: 700;
+     border-radius: 15px;
+     padding: 5px;
+     min-width: 67px;
+     text-align: center;
+     cursor: pointer;
+     background: #1da0f2;
+     color: #fff;
+     box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .show-more a{
      text-decoration: none;
-     color: #00a7ff;
+     color: #1b94e0;
+     margin-left: 25px;
+     cursor: pointer;
 }
-.show-more:hover{
-     background: #e8e8e8;
-     border-radius: 0 0 20px 20px;
+.show-more a:hover{
+     background: rgba(0, 0, 0, 0.03);
 }
-.person{
-     display: grid;
-     grid-template-columns: 20% 50% 30%;
-     padding: 10px 0;
-     align-items: center;
-     border-bottom: 1px solid #d4d4d4;
-}
-.person-profile{
-     padding: 0 0 0 10px;
-}
-.person-profile img{
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     opacity: 0.9;
-}
-.person-profile img:hover{
-     opacity: 1;
-}
-.followers-name{
-     font-size: 16px;
-     font-weight: 600;
-}
-.name h3{
-     font-size: 16px;
-}
-.name p{
-     opacity: 0.6;
-     padding: 5px 0 0 0;
-}
-.send-follow-request-button{
-     padding: 5px 20px;
-     outline: none;
-     border: 2px solid #00a7ff;
-     color: #00a7ff;
-     border-radius: 20px;
-     font-size: 17px;
-     text-transform: capitalize;
-}
-.send-follow-request-button:hover{
-     background: #d8eeff;
-     color: #00a7ff;
-}
-@media(max-width:1450px){
-     .option span{
-          display: none;
-     }
-     .option button{
-          padding: 10px 10px;
-     }
-     .option-center{
-          width: 99.6%;
-     }
-     .option div a i{
-          padding: 0;
-          border-radius: 50%;
-     }
-     .profile-msg{
-          grid-template-columns: 25% 40% 35%;
-     }
-}
-@media(max-width:960px){
-     .options-menu{
-          display: none;
-     }
-     .trending-menu{
-          display: none;
-     }
-     .containner{
-          grid-template-columns: 100%;
-     }
-     .profile-msg{
-          grid-template-columns: 20% 60% 20%;
-     }
-}
+
