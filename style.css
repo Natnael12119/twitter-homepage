@@ -1,416 +1,471 @@
 html {
-     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
- }
-.layout{
-     display: grid;
-     grid-template-columns: 275px auto 350px;
-     margin: 0 auto;
-     max-width: 1200px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
 }
-.right-sidebar{
-     position: fixed;
-     width: 350px;
+.layout {
+  display: grid;
+  grid-template-columns: 17rem auto 22rem;
+  margin: 0 auto;
+  max-width: 75rem;
 }
-.logo{
-     padding: 0 0 4% 1%;
+.right-sidebar {
+  position: fixed;
+  width: 20rem;
 }
-.logo i{
-     font-size: 33px;
-     color: #00a7f0;
-     top: 0;
-     position: fixed;
+.logo {
+  padding: 0 0 4% 1%;
 }
-.sidebar-menu{
-     position: fixed;
+.logo i {
+  font-size: 2rem;
+  color: #00a7f0;
+  top: 0;
+  position: fixed;
 }
-.sidebar-menu div{
-     padding: 8% 0 0% 1%;
+.sidebar-menu {
+  /* position: fixed; */
+  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* display: flex;
+     flex-direction: column;
+     align-items: space-between; */
 }
-.sidebar-menu div a{
-     text-decoration: none;
-     font-size: 19px;
-     font-weight: 700;
-     padding: 10px;
-     display: flex;
-     align-items: center;
-     border-radius: 50px;
-     color: black;
+.sidebar-menu div {
+  padding: 8% 0 0% 1%;
+}
+.sidebar-menu div a {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  color: black;
+}
+.sidebar-menu div a i {
+  padding: 0 20% 0 0;
+  font-weight: 100;
+}
+.sidebar-menu div a:hover {
+  color: #00a7f0;
+  background: #e1f5ff;
+  width: 170px;
+}
+.sidebar-menu button {
+  padding: 1rem 5rem;
+  border-radius: 2rem;
+  outline: none;
+  background: #00a7f0;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.sidebar-menu button:hover {
+  background: #00a7f0;
+  transition: 0.1s;
+}
+.profile-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.63rem 1rem;
+  position: fixed;
+  margin-top: 7.5rem;
+  margin-left: 0;
+}
+.profile-img:hover {
+  background: #e1f5ff;
+  border-radius: 30%;
+}
+.profile-img img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.9;
+}
 
-}    
-.sidebar-menu div a i{
-     padding: 0 20% 0 0;
-     font-weight: 100;
+.profile-authorName {
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 1rem;
 }
-.sidebar-menu div a:hover{
-     color: #00a7f0;
-     background: #e1f5ff;
-     width: 170px;
+.profile-authorSlug {
+  font-size: 1rem;
+  color: #657786;
+  cursor: pointer;
+  margin-left: 1rem;
 }
-.sidebar-menu button{
-     padding: 15px 80px;
-     border-radius: 30px;
-     outline: none;
-     background: #00a7f0;
-     color: white;
-     border: none;
-     font-weight: 600;
-     font-size: 16px;
-     cursor: pointer;
+.profile-authorName i {
+  margin-left: 7px;
 }
-.sidebar-menu button:hover{
-     background: #00a7f0;
-     transition: 0.1s;
+.main {
+  border-left: 1px solid #e6ecf0;
+  border-right: 1px solid #e6ecf0;
 }
-.main{
-     border-left: 1px solid #e6ecf0;
-     border-right: 1px solid #e6ecf0;
+.prefer {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8e8;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  cursor: pointer;
 }
-.prefer{
-     width: 100%;
-     height: 55px;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
-     align-items: center;
-     border-bottom: 1px solid #e8e8e8e8;
-     position: sticky;
-     top: 0;
-     background: white;
-     z-index: 1000;
-     cursor: pointer;
+.prefer span {
+  padding: 0 1.25rem;
 }
-.prefer span{
-     padding: 0 20px;
+.prefer span a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 18px;
 }
-.prefer span a{
-     text-decoration: none;
-     color: black;
-     font-weight: 800;
-     font-size: 18px;
+.prefer span i {
+  font-size: 18px;
+  cursor: pointer;
 }
-.prefer span i{
-     font-size: 18px;
-     cursor: pointer;
+.prefer span i:hover {
+  color: #00a7f0;
 }
-.prefer span i:hover{
-     color: #00a7f0;
+.you-tweet-other-tweet {
+  max-height: 44rem;
+  border-bottom: 0.75px solid #e6ecf0;
+  padding: 5px;
 }
-.you-tweet-other-tweet{
-     max-height: 704px;
-     border-bottom: 12px solid #e6ecf0;
-     padding: 5px;
+.you-tweet-other-tweet {
+  overflow: auto;
+  overflow-y: hidden;
 }
-.you-tweet-other-tweet{
-     overflow: auto;
-     overflow-y: hidden;
+.you-teew {
+  display: black;
+  width: 100%;
+  border-bottom: 10px solid #e8e8e8;
+  height: 8rem;
 }
-.you-teew{
-     display: black;
-     width: 100%;
-     border-bottom: 10px solid #e8e8e8;
-     height: 130px;
+.profile-message {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 15px;
 }
-.profile-message{
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     padding: 10px 15px;
+
+.profile-message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.9;
 }
-.profile-message img{
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     cursor: pointer;
-     opacity: 0.9;
+.profile-message img:hover {
+  opacity: 1;
 }
-.profile-message img:hover{
-     opacity: 1;
+.profile-message span input {
+  padding: 0 0 0 10px;
+  font-size: 18px;
+  color: #525252;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
 }
-.profile-message span input{
-     padding: 0 0 0 10px;
-     font-size: 18px;
-     color: #525252;
-     letter-spacing: 0.5px;
-     border: none;
-     outline: none;
+.add-extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.add-extra{
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
+.images-more {
+  margin: 5px 0 5px 7px;
 }
-.images-more{
-     margin: 5px 0 5px 7px;
+.images-more span a {
+  text-decoration: none;
+  color: #00a7f0;
+  font-size: 20px;
+  padding: 8px 8px;
+  border-radius: 50%;
 }
-.images-more span a{
-     text-decoration: none;
-     color: #00a7f0;
-     font-size: 20px;
-     padding: 8px 8px;
-     border-radius: 50%;
+.images-more span a:hover {
+  background: #e1f5ff;
 }
-.images-more span a:hover{
-     background: #e1f5ff;
+.add-extra span button {
+  margin: 0 30px 0 0;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #00a7f0;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
 }
-.add-extra span button{
-     margin: 0 30px 0 0;
-     padding: 10px 25px;
-     border-radius: 30px;
-     border: none;
-     background: #00a7f0;
-     font-size: 16px;
-     color: white;
-     font-weight: 700;
+.add-extra span button:hover {
+  background: #0093ff;
 }
-.add-extra span button:hover{
-     background: #0093ff;
+.tweet {
+  display: flex;
+  border-bottom: 1px solid #e6ecf0;
+  margin-bottom: 2px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
-.tweet{
-     display: flex;
-     border-bottom: 1px solid #e6ecf0;
-     margin-bottom: 2px;
-     padding: 10px 15px;
-     cursor: pointer;
+.tweet img {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-.tweet img{
-     width: 49px;
-     height: 49px;
-     border-radius: 50%;
-     margin-right: 10px;
+.tweet-header {
+  display: flex;
 }
-.tweet-header{
-     display: flex;
+.tweet-authorName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #141712;
+  margin-right: 5px;
 }
-.tweet-authorName{
-     font-size: 15px;
-     font-weight: 700;
-     color: #141712;
-     margin-right: 5px;
+.tweet-authorSlug {
+  font-size: 15px;
+  color: #5b7083;
 }
-.tweet-authorSlug{
-     font-size: 15px;
-     color: #5b7083;
+.tweet-publishTime {
+  margin-left: 5px;
+  color: #657786;
 }
-.tweet-publishTime{
-     margin-left: 5px;
-     color: #657786;
+.tweet-content img {
+  width: 500px;
+  height: 500px;
+  margin-right: 15px;
+  margin-top: 10px;
+  border-radius: 5%;
 }
-.tweet-content img{
-     width: 500px;
-     height: 500px;
-     margin-right: 15px;
-     margin-top: 10px;
-     border-radius: 5%;
+.tweet:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
-.tweet:hover{
-     background: rgba(0, 0, 0, 0.03);
+.tweet a {
+  color: #1b94e0;
+  text-decoration: none;
 }
-.tweet a{
-     color: #1b94e0;
-     text-decoration: none;
+.tweet a:hover {
+  text-decoration: underline;
 }
-.tweet a:hover{
-     text-decoration: underline;
+.trends-for-you {
+  border-radius: 10px;
+  background: #f5f8fa;
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
-.trends-for-you{
-     border-radius: 15px;
-     background: #f5f8fa;
-     margin-left: 25px;
-     margin-bottom: 10px;
+.search input {
+  border-radius: 45px;
+  background: #f5f8fa;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  display: center;
+  padding: 4% 15%;
 }
-.search input{
-     border-radius: 45px;
-     background: #f5f8fa;
-     margin-bottom: 15px;
-     margin-left: 25px;
-     display: center;
-     padding: 4% 20%;
+.search i {
+  color: #5b7083;
 }
-.search i{
-     color: #5b7083;
+.trends-for-youBlock {
+  border-bottom: 1px solid #e6ecf0;
+  padding: 10px 15px;
 }
-.trends-for-youBlock{
-     border-bottom: 1px solid #e6ecf0;
-     padding: 10px 15px;
+.trends-for-youBlock:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
-.trends-for-youBlock:hover{
-     background: rgba(0, 0, 0, 0.03);
-     border-radius: 15px;
+.trends-for-youBlock:last-child {
+  border-bottom: none;
 }
-.trends-for-youBlock:last-child{
-     border-bottom: none;
+.trends-for-youHeading {
+  font-size: 19px;
+  font-weight: bold;
+  color: #14171a;
 }
-.trends-for-youHeading{
-     font-size: 19px;
-     font-weight: bold;
-     color: #14171a;
+.trends-for-youHeading i {
+  color: #0093ff;
+  margin-left: 95%;
+  font-weight: 500;
 }
-.trends-for-youHeading i{
-     color: #0093ff;
-     margin-left: 95%;
-     font-weight: 500;
+.trends-for-youInformation {
+  font-size: 13px;
+  font-weight: 300;
+  color: #657786;
+  cursor: pointer;
 }
-.trends-for-youInformation{
-     font-size: 13px;
-     font-weight: 300;
-     color: #657786;
-     cursor: pointer;
+.trends-for-youInformation i {
+  color: #657786;
+  margin-left: 95%;
+  font-weight: 500;
+  border: 1px solid red;
 }
-.trends-for-youInformation i{
-     color: #657786;
-     margin-left: 95%;
-     font-weight: 500;
+.icon-container {
+  border: 1px solid red;
+  /* width: 30px;
+  height: 30px; */
 }
-.trends-for-youInformation i:hover{
-     background: #00a7f0;
-     width: 29px;
-     height: 29px;
-     border-radius: 100%;
-     margin-left: 95%;
+.trends-for-youInformation i:hover {
+  background: #e1f5ff;
+  color: #0093ff;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-left: 95%;
 }
-.trends-for-youName{
-     font-size: 15px;
-     font-weight: bold;
-     color: #14171a;
-     margin-bottom: 5px;
-     margin-top: 2px;
-     cursor: pointer;
+.trends-for-youName {
+  font-size: 15px;
+  font-weight: bold;
+  color: #14171a;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  cursor: pointer;
 }
 .show-more {
-     cursor: pointer;
-     border-top: 1px solid #e6ecf0;
-     padding: 15px 15px;
-     color: #00a7f0;
+  cursor: pointer;
+  border-top: 1px solid #e6ecf0;
+  padding: 15px 15px;
+  color: #00a7f0;
 }
-.show-more a{
-     color: #00a7f0;
-     text-decoration: none;
+.show-more a {
+  color: #00a7f0;
+  text-decoration: none;
 }
-.show-more:hover{
-     background: rgba(0, 0, 0, 0.03);
-     border-radius: 15px;
+.show-more:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
-.who-to-follow{
-     background: #f5f8fa;
-     border-radius: 15px;
-     margin-left: 25px;
+.who-to-follow {
+  background: #f5f8fa;
+  border-radius: 15px;
+  margin-left: 15px;
 }
-.who-to-followBlock{
-     padding: 15px 15px;
-     display: flex;
-     align-items: center;
-     border-bottom: 1px solid #e6ecf0;
+.who-to-followBlock {
+  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e6ecf0;
 }
-.who-to-followBlock:hover{
-     background: rgba(0, 0, 0, 0.03);
-     border-radius: 15px;
+.who-to-followBlock:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
-.who-to-followBlock:last-child{
-     border-bottom: none;
+.who-to-followBlock:last-child {
+  border-bottom: none;
 }
-.who-to-followHeading{
-     font-size: 19px;
-     font-weight: bold;
-     color: #14171a;
+.who-to-followHeading {
+  font-size: 19px;
+  font-weight: bold;
+  color: #14171a;
 }
-.who-to-follow img{
-     width: 49px;
-     height: 49px;
-     border-radius: 50%;
-     margin-right: 10px;
-     cursor: pointer;
+.who-to-follow img {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
 }
-.who-to-followContent{
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
-     cursor: pointer;
+.who-to-followContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
 }
-.who-to-follow-authorName{
-     font-size: 15px;
-     font-weight: 700;
-     cursor: pointer;
+.who-to-follow-authorName {
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
 }
-.who-to-follow-authorName:hover{
-     text-decoration: underline;
+.who-to-follow-authorName:hover {
+  text-decoration: underline;
 }
-.who-to-follow-authorSlug{
-     font-size: 15px;
-     color: #657786;
-     cursor: pointer;
+.who-to-follow-authorSlug {
+  font-size: 15px;
+  color: #657786;
+  cursor: pointer;
 }
-.who-to-followButton{
-     border: 1px solid #1da0f2;
-     color: #1da0f2;
-     font-size: 15px;
-     font-weight: 700;
-     border-radius: 15px;
-     padding: 5px;
-     min-width: 67px;
-     text-align: center;
-     cursor: pointer;
+.who-to-followButton {
+  border: 1px solid #1da0f2;
+  color: #1da0f2;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 67px;
+  text-align: center;
+  cursor: pointer;
 }
-.who-to-followButton:hover{
-     background: rgba(29, 161, 242, 0.1);
-     cursor: pointer;
+.who-to-followButton:hover {
+  background: rgba(29, 161, 242, 0.1);
+  cursor: pointer;
 }
-.who-to-followingButton{
-     border: 1px solid #1da0f2;
-     color: #1da0f2;
-     font-size: 15px;
-     font-weight: 700;
-     border-radius: 15px;
-     padding: 5px;
-     min-width: 67px;
-     text-align: center;
-     cursor: pointer;
-     background: #1da0f2;
-     color: #fff;
-     box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+.who-to-followingButton {
+  border: 1px solid #1da0f2;
+  color: #1da0f2;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 67px;
+  text-align: center;
+  cursor: pointer;
+  background: #1da0f2;
+  color: #fff;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .more {
-     cursor: pointer;
-     padding: 15px 15px;
-     color: #00a7f0;
-}.more a{
-     color: #00a7f0;
-     text-decoration: none;
+  cursor: pointer;
+  padding: 15px 15px;
+  color: #00a7f0;
 }
-.more:hover{
-     background: rgba(0, 0, 0, 0.03);
-     border-radius: 15px;
+.more a {
+  color: #00a7f0;
+  text-decoration: none;
 }
-.your-reaction{
-     padding: 3% 0 5% 0;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     width: 100%;
-     opacity: 0.7;
+.more:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
-.your-reaction div{
-     display: flex;
-     align-items: center;
-     cursor: pointer;
+.your-reaction {
+  padding: 3% 0 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0.7;
 }
-.your-reaction div p{
-     padding: 0 0 0 0;
-     font-size: 10px;
+.your-reaction div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-.your-reaction div i{
-     font-size: 15px;
-     padding: 5px 5px;
-     border-radius: 50%;
+.your-reaction div p {
+  padding: 0 0 0 0;
+  font-size: 10px;
 }
-.comment:hover{
-     color: #00a7ff;
+.your-reaction div i {
+  font-size: 15px;
+  padding: 5px 5px;
+  border-radius: 50%;
 }
-.retweet:hover{
-     color: green;
+.comment:hover {
+  color: #00a7ff;
 }
-.like:hover{
-     color: red;
+.retweet:hover {
+  color: green;
 }
-.bookmark:hover{
-     color: #00a7ff
+.like:hover {
+  color: red;
+}
+.bookmark:hover {
+  color: #00a7ff;
 }
